@@ -56,3 +56,30 @@ func main() {
 		fmt.Println(err.Error())
 	}
 }
+
+/*
+Imagine you are a software developer who has been tasked with integrating a third-party API into your company's system. This API is crucial for your project, but it has a unique way of communicating errors. Instead of conventional error messages, it sends integer values, each representing a specific error.
+
+You've been given the following mappings of error codes to their meanings:
+
+Code	Description
+1	Incorrect input
+2	The server encounters internal error
+4	The server is overloaded by too much traffic
+8	You are not authorized to proceed with the input
+If there is no errors, then your function should return ["No Error"]
+
+To complicate matters, the API might combine error codes to represent multiple problems occurring at the same time.
+
+The output should be an array (or a slice in Go) of error messages.
+
+Examples
+Input: 0
+Output: ["No Error"]
+
+Input: 8
+Output: ["You are not authorized to proceed with the input"]
+
+Input: 3
+Output: ["Incorrect input", "The server encounters internal error"]
+*/
